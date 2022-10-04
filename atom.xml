@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>嫣然一笑の博客</title>
+  
+  <subtitle>登峰造极</subtitle>
+  <link href="http://zhuanshenyujianta.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://zhuanshenyujianta.github.io/"/>
+  <updated>2022-10-04T11:21:16.904Z</updated>
+  <id>http://zhuanshenyujianta.github.io/</id>
+  
+  <author>
+    <name>ran yan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>String系列</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/10/04/string-xi/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/10/04/string-xi/</id>
+    <published>2022-10-03T16:00:00.000Z</published>
+    <updated>2022-10-04T11:21:16.904Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;String，StringBuffer和StringBuilder&quot;&gt;&lt;a href=&quot;#String，StringBuffer和StringBuilder&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>装箱与拆箱</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/10/03/zhuang-xiang-yu-chai-xiang/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/10/03/zhuang-xiang-yu-chai-xiang/</id>
+    <published>2022-10-02T16:00:00.000Z</published>
+    <updated>2022-10-03T07:06:11.738Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;装箱与拆箱&quot;&gt;&lt;a href=&quot;#装箱与拆箱&quot; class=&quot;headerlink&quot; title=&quot;装箱与拆箱&quot;&gt;&lt;/a&gt;装箱与拆箱&lt;/h1&gt;&lt;h2 id=&quot;1-什么是装箱和拆箱&quot;&gt;&lt;a href=&quot;#1-什么是装箱和拆箱&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内部类</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/10/01/nei-bu-lei/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/10/01/nei-bu-lei/</id>
+    <published>2022-09-30T16:00:00.000Z</published>
+    <updated>2022-10-01T08:50:44.438Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;内部类&quot;&gt;&lt;a href=&quot;#内部类&quot; class=&quot;headerlink&quot; title=&quot;内部类&quot;&gt;&lt;/a&gt;内部类&lt;/h1&gt;&lt;h2 id=&quot;1-基本介绍&quot;&gt;&lt;a href=&quot;#1-基本介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>final finally finalize</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/09/30/final/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/09/30/final/</id>
+    <published>2022-09-29T16:00:00.000Z</published>
+    <updated>2022-09-30T12:55:27.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;final-finally和finaliz的区别&quot;&gt;&lt;a href=&quot;#final-finally和finaliz的区别&quot; class=&quot;headerlink&quot; title=&quot;final finally和finaliz的区别&quot;&gt;&lt;/a&gt;final</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>==和equals的区别</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/09/27/he-equals/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/09/27/he-equals/</id>
+    <published>2022-09-26T16:00:00.000Z</published>
+    <updated>2022-09-27T09:36:02.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;x3D-x3D-和equals的区别&quot;&gt;&lt;a href=&quot;#x3D-x3D-和equals的区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK JRE JVM</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/09/26/jdk-jre-jvm/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/09/26/jdk-jre-jvm/</id>
+    <published>2022-09-25T16:00:00.000Z</published>
+    <updated>2022-09-26T07:52:10.571Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JDK-JRE-JVM&quot;&gt;&lt;a href=&quot;#JDK-JRE-JVM&quot; class=&quot;headerlink&quot; title=&quot;JDK,JRE,JVM&quot;&gt;&lt;/a&gt;JDK,JRE,JVM&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaSE" scheme="http://zhuanshenyujianta.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇博客文章</title>
+    <link href="http://zhuanshenyujianta.github.io/2022/05/29/di-yi-pian-bo-ke-wen-zhang/"/>
+    <id>http://zhuanshenyujianta.github.io/2022/05/29/di-yi-pian-bo-ke-wen-zhang/</id>
+    <published>2022-05-28T16:00:00.000Z</published>
+    <updated>2022-09-03T08:35:47.751Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;我的第一篇博客文章&quot;&gt;&lt;a href=&quot;#我的第一篇博客文章&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
