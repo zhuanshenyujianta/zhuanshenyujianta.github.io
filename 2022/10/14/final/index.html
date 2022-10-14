@@ -448,21 +448,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-30
+                    2022-10-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-30
+                    2022-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1k
                 </div>
                 
 
@@ -482,126 +482,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="final-finally和finaliz的区别"><a href="#final-finally和finaliz的区别" class="headerlink" title="final finally和finaliz的区别"></a>final finally和finaliz的区别</h1><h2 id="1-final"><a href="#1-final" class="headerlink" title="1.final"></a>1.final</h2><p><strong>final可以修饰类，属性，方法和局部变量</strong></p>
-<p>final使用需求：</p>
-<ul>
-<li>当不希望类被继承时，可以用final修饰</li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
-<span class="token comment">//class B extends A &#123;&#125; 该句会报错</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>当不希望父类的某个方法被子类覆盖&#x2F;重写时，可以用final关键字</li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">C</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token keyword">class</span> <span class="token class-name">D</span> <span class="token keyword">extends</span> <span class="token class-name">C</span> <span class="token punctuation">&#123;</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//该方法会报错</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写了C类的hi()方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>当不希望类的某个属性的值被修改，可以用final修饰</li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Final01</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">E</span> e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">E</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        e<span class="token punctuation">.</span>TAX_RATE <span class="token operator">=</span> <span class="token number">0.09</span><span class="token punctuation">;</span><span class="token comment">//此处会报错</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">E</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">double</span> TAX_RATE <span class="token operator">=</span> <span class="token number">0.08</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>当不希望某个局部变量被修改，可以用final修饰</li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">F</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">final</span> <span class="token keyword">double</span> NUM <span class="token operator">=</span> <span class="token number">0.01</span><span class="token punctuation">;</span>
-        NUM <span class="token operator">=</span> <span class="token number">0.05</span><span class="token punctuation">;</span><span class="token comment">//这里会报错</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"NUM="</span> <span class="token operator">+</span> NUM<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>final使用细节：</strong></p>
-<ul>
-<li>final修饰的属性又叫常量，一般用XX_XX来命名</li>
-<li>final修饰的属性在定义时，必须赋初值，并且以后不能再修改，赋值可以在如下几个位置之一：</li>
-</ul>
-<p>​       ①定义时   ②在构造器中   ③在代码块中</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">AA</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">double</span> TAX_RATE1 <span class="token operator">=</span> <span class="token number">0.08</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">double</span> TAX_RATE2<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">double</span> TAX_RATE3<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">AA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        TAX_RATE2 <span class="token operator">=</span> <span class="token number">0.05</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+                <h1 id="final-finally-finalize-三者区别"><a href="#final-finally-finalize-三者区别" class="headerlink" title="final finally finalize 三者区别"></a>final finally finalize 三者区别</h1><h2 id="1-final"><a href="#1-final" class="headerlink" title="1.final"></a>1.final</h2><h3 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1.基本介绍"></a>1.基本介绍</h3><p>1）当不希望类被继承时，可以用final修饰</p>
+<p>2）当不希望父类的某个子方法覆盖&#x2F;重写时，可以用final关键字</p>
+<p>3）当不希望类的某个属性的值被修改，可以用final修饰</p>
+<p>4）当不希望某个局部变量被修改，可以用final修饰</p>
+<h3 id="2-final细节"><a href="#2-final细节" class="headerlink" title="2.final细节"></a>2.final细节</h3><p>1）final修饰的属性又叫常量，一般用XX_XX_XX来命名</p>
+<p>2）final修饰的属性在定义时，必须赋初值，并且以后不能再修改，赋值可以在如下位置之一</p>
+<p>​      ①定义时，如 public final double TAX_RATE &#x3D; 0.08;</p>
+<p>​      ②在构造器中</p>
+<p>​      ③在代码块中</p>
+<p>3）如果final修饰的属性是静态的，则初始化的位置只能是 ①定义时  ②在静态代码块 不能在构造器中赋值</p>
+<p>4）final类不能继承，但是可以实例化对象</p>
+<p>5）如果类不是final类，但是含有final方法，则该方法虽然不能重写，但是可以被继承</p>
+<p>6)一般来说，如果一个类已经是final类，就没有必要再将方法修饰成final方法</p>
+<p>7）final不能修饰构造方法</p>
+<p>8）final和static往往搭配使用，效率更高，底层编译器做了优化处理</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon02</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
     <span class="token punctuation">&#123;</span>
-        TAX_RATE3 <span class="token operator">=</span> <span class="token number">0.01</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>BBB<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">BBB</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">static</span> <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> 
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"BBB静态代码块被执行"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token comment">//输出10000，不会导致类加载，所以不会输出 BBB静态代码块被执行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li><p>如果final修饰的属性是静态的，则初始化的位置只能是 ①定义时  ②在静态代码块   不能在构造器中赋值</p>
-</li>
-<li><p>final类不能继承，但是可以实例化对象</p>
-</li>
-<li><p>如果类不是final类，但是含有final方法，则该方法虽然不能重写，但是可以被继承</p>
-</li>
-<li><p>final不能修饰构造方法(即构造器)</p>
-</li>
-<li><p>final和static往往搭配使用，效率更高，不会导致类加载</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Final01</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>BB<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token keyword">class</span> <span class="token class-name">BB</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-    <span class="token keyword">static</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态代码块被执行..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment">//只输出100，不输出静态代码块中的内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>包装类(Integer,Double,Float,Boolean),String等都是final类</p>
-</li>
-</ul>
-<h2 id="2-finally"><a href="#2-finally" class="headerlink" title="2.finally"></a>2.finally</h2><p>finally是在异常处理中使用的</p>
-<p>一般和try-finally,try-catch-finally配套使用；</p>
-<p>不管 try 语句块正常结束还是异常结束,finally 语句块是保证要执行的.</p>
-<p>如果 try 语句块正常结束,那么在 try 语句块中的语句都执行完之后,再执行 finally 语句块.</p>
-<p><strong>关于finally：</strong></p>
+<p>9）包装类（Integer，Double，Float，Boolean）等都是final、 String 也是final</p>
+<h2 id="2-finally"><a href="#2-finally" class="headerlink" title="2.finally"></a>2.finally</h2><p>finally是在异常处理中的使用的</p>
+<p>不管 try 语句块正常结束还是异常结束,finally 语句块是保证要执行的</p>
+<p>如果 try 语句块正常结束,那么在 try 语句块中的语句都执行完之后,再执行 finally 语句块</p>
 <ol>
-<li>不管有没有出现异常,finally中的代码都会执行;</li>
+<li>不管有没有出现异常,finally块中的代码都会执行;</li>
 <li>当try和catch中有return时,finally仍然会执行;</li>
 <li>finally是在return后面的表达式运算后执行的(此时并没有返回运算后的值,而是先把要返回的值保存起来,无论finally中的代码怎么样,返回的值都不会改变,仍然是之前保存的值),所以函数返回值是在finally执行前确定好的;</li>
 <li>finally中最好不要包含return,否则程序会提前退出,返回值不是try或catch中保存的返回值</li>
 </ol>
-<h2 id="3-finalize"><a href="#3-finalize" class="headerlink" title="3.finalize"></a>3.finalize</h2><p>finalize() 是Java中Object类的一个方法.返回值为空,当该对象被垃圾回收器回收时,系统会自动调用该方法</p>
-<p>子类可以重写该方法，做一些释放资源的操作</p>
-<p>当某个对象没有任何引用时，则jvm就认为这个对象是一个垃圾对象，就会使用垃圾回收机制来销毁该对象，在销毁该对象前，就会调用finalize方法</p>
-<p>垃圾回收机制的调用，是由系统来决定的，也可以通过System.gc() 主动触发垃圾回收机制</p>
+<h2 id="3-finalize"><a href="#3-finalize" class="headerlink" title="3.finalize"></a>3.finalize</h2><p>finalize() 是Java中Object的一个protected方法.返回值为空,当该对象被垃圾回收器回收时,会调用该方法.</p>
 <p><strong>关于finalize()函数：</strong></p>
-<ol>
+<ul>
 <li>finalize不等价于c++中的析构函数;</li>
 <li>对象可能不被垃圾机回收器回收;</li>
 <li>垃圾回收不等于析构;</li>
 <li>垃圾回收只与内存有关;</li>
 <li>垃圾回收和finalize()都是靠不住的,只要JVM还没有快到耗尽内存的地步,它是不会浪费时间进行垃圾回收的;</li>
-</ol>
-<h2 id="4-三者的区别"><a href="#4-三者的区别" class="headerlink" title="4.三者的区别"></a>4.三者的区别</h2><h3 id="1-性质不同"><a href="#1-性质不同" class="headerlink" title="1.性质不同"></a>1.性质不同</h3><p>（1）final为关键字;</p>
+<li>程序强制终结后,那些失去引用的对象将会被垃圾回收.(System.gc())</li>
+</ul>
+<p>finalize()的用途:比如当一个对象代表了打开了一个文件,在对象被回收前,程序应该要关闭该文件,可以通过finalize函数来发现未关闭文件的对象,并对其进行处理.</p>
+<h2 id="4-三者区别"><a href="#4-三者区别" class="headerlink" title="4.三者区别"></a>4.三者区别</h2><h3 id="1-性质不同"><a href="#1-性质不同" class="headerlink" title="1.性质不同"></a>1.性质不同</h3><p>（1）final为关键字;</p>
 <p>（2）finalize()为方法;</p>
 <p>（3）finally为区块标志,用于try语句中;</p>
-<h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><p>（1）final为用于标识常量的关键字,final标识的关键字存储在常量池中;</p>
-<p>（2）finalize()方法在Object中进行了定义,用于在对象“消失”时,由JVM进行调用，用于对对象进行垃圾回收，类似于C++中的析构函数;用户自定义时,用于释放对象占用的资源(比如进行 I&#x2F;0操作);</p>
-<p>（3）finally{}用于标识代码块,与try{ }进行配合,不论try中的代码执行完或没有执行完(这里指有异常),该代码块之中的程序必定会进行 </p>
-<p><strong>因此，final，finally和finalize使用场景各不相同，互不关联。</strong></p>
+<h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><p>（1）final为用于标识常量的关键字,final标识的关键字存储在常量池中</p>
+<p>（2）finalize()方法在Object中进行了定义,用于在对象“消失”时,由JVM进行调用用于对对象 进行垃圾回收，类似于C++中的析构函数;用户自定义时,用于释放对象占用的资源(比如进行 I&#x2F;0操作);</p>
+<p>（3）finally{ }用于标识代码块,与try{ }进行配合,不论try中的代码执行完或没有执行完(这里指有异常),该代码块之中的程序必定会进行 </p>
 
                 
             </div>
@@ -628,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhuanshenyujianta.github.io/2022/09/30/final/">http://zhuanshenyujianta.github.io/2022/09/30/final/</a>
+                    <a href="http://zhuanshenyujianta.github.io/2022/10/14/final/">http://zhuanshenyujianta.github.io/2022/10/14/final/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -737,13 +675,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/01/nei-bu-lei/">
+                <a href="/2022/10/14/mysql-cun-chu-yin-qing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="内部类">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Mysql存储引擎">
                         
-                        <span class="card-title">内部类</span>
+                        <span class="card-title">Mysql存储引擎</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -754,7 +692,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-14
                         </span>
                         <span class="publish-author">
                             
@@ -767,8 +705,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaSE/">
-                        <span class="chip bg-color">JavaSE</span>
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>
@@ -782,13 +720,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/27/he-equals/">
+                <a href="/2022/10/04/string-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="==和equals的区别">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="String系列">
                         
-                        <span class="card-title">==和equals的区别</span>
+                        <span class="card-title">String系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -799,7 +737,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
                             </span>
                         <span class="publish-author">
                             
@@ -962,7 +900,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.2k</span>&nbsp;字
+                class="white-color">7.6k</span>&nbsp;字
             
             
             

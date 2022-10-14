@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="装箱与拆箱, 嫣然一笑の博客">
+    <meta name="keywords" content="Mysql存储引擎, 嫣然一笑の博客">
     <meta name="description" content="欢迎来到我的极客世界">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>装箱与拆箱 | 嫣然一笑の博客</title>
+    <title>Mysql存储引擎 | 嫣然一笑の博客</title>
     <link rel="icon" type="image/jpeg" href="/tx.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">装箱与拆箱</h1>
+                    <h1 class="description center-align post-title">Mysql存储引擎</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaSE/">
-                                <span class="chip bg-color">JavaSE</span>
+                            <a href="/tags/Mysql/">
+                                <span class="chip bg-color">Mysql</span>
                             </a>
                         
                     </div>
@@ -448,21 +448,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-03
+                    2022-10-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-03
+                    2022-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    910
+                    567
                 </div>
                 
 
@@ -482,90 +482,132 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="装箱与拆箱"><a href="#装箱与拆箱" class="headerlink" title="装箱与拆箱"></a>装箱与拆箱</h1><h2 id="1-什么是装箱和拆箱"><a href="#1-什么是装箱和拆箱" class="headerlink" title="1.什么是装箱和拆箱"></a>1.什么是装箱和拆箱</h2><p>装箱：基本类型转变为包装器类型的过程。<br>拆箱：包装器类型转变为基本类型的过程。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//JDK5之前是不支持自动装箱和自动拆箱的，定义Integer对象，必须</span>
-<span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-<span class="token comment">//JDK5开始，提供了自动装箱的功能，定义Integer对象可以这样</span>
-<span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
- 
-<span class="token keyword">int</span> n <span class="token operator">=</span> i<span class="token punctuation">;</span><span class="token comment">//自动拆箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-装箱和拆箱的执行过程"><a href="#2-装箱和拆箱的执行过程" class="headerlink" title="2.装箱和拆箱的执行过程"></a>2.装箱和拆箱的执行过程</h2><p>装箱是通过调用包装器类的 valueOf 方法实现的<br>拆箱是通过调用包装器类的 xxxValue 方法实现的，xxx代表对应的基本数据类型<br>如int装箱的时候自动调用Integer的valueOf(int)方法；Integer拆箱的时候自动调用Integer的intValue方法</p>
-<h2 id="3-常见包装类的比较"><a href="#3-常见包装类的比较" class="headerlink" title="3.常见包装类的比较"></a>3.常见包装类的比较</h2><ul>
-<li>整型的包装类 valueOf 方法返回对象时，在常用的取值范围(-128~127)内，会返回缓存对象。</li>
-<li>浮点型的包装类 valueOf 方法返回新的对象。</li>
-<li>布尔型的包装类 valueOf 方法 Boolean类的静态常量 TRUE | FALSE。</li>
+                <h1 id="Mysql存储引擎"><a href="#Mysql存储引擎" class="headerlink" title="Mysql存储引擎"></a>Mysql存储引擎</h1><h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1.基本介绍"></a>1.基本介绍</h2><p>1.MySQL的表类型由存储引擎(Storage Engines)决定，主要包括MyISAM、innoDB、Memory等。</p>
+<p>2.MySQL数据表主要支持六种类型，分别是:GSV、Memory、ARCHIVE、MRG MYISAM、MYISAM、InnoDB.</p>
+<p>3.这六种又分为两类，一类是”事务安全型”(transaction-safe)，比如:InnoDB;其余都属于第二类，称为”非事务安全型”(non-transaction- safe)[mysiam和memory]。</p>
+<h2 id="2-主要的存储引擎"><a href="#2-主要的存储引擎" class="headerlink" title="2.主要的存储引擎"></a>2.主要的存储引擎</h2><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>Myisam</th>
+<th>InnoDB</th>
+<th>Memory</th>
+<th>Archive</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>批量插入的速度</td>
+<td>高</td>
+<td>低</td>
+<td>高</td>
+<td>非常高</td>
+</tr>
+<tr>
+<td>事务安全</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>全文索引</td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>锁机制</td>
+<td>表锁</td>
+<td>行锁</td>
+<td>表锁</td>
+<td>行锁</td>
+</tr>
+<tr>
+<td>存储限制</td>
+<td>没有</td>
+<td>64TB</td>
+<td>有</td>
+<td>没有</td>
+</tr>
+<tr>
+<td>B树索引</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>哈希索引</td>
+<td></td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>集群索引</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据缓存</td>
+<td></td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>索引缓存</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>数据可压缩</td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td>支持</td>
+</tr>
+<tr>
+<td>空间使用</td>
+<td>低</td>
+<td>高</td>
+<td>N&#x2F;A</td>
+<td>非常低</td>
+</tr>
+<tr>
+<td>内存使用</td>
+<td>低</td>
+<td>高</td>
+<td>中等</td>
+<td>低</td>
+</tr>
+<tr>
+<td>支持外键</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="3-如何选择表的存储引擎"><a href="#3-如何选择表的存储引擎" class="headerlink" title="3.如何选择表的存储引擎"></a>3.如何选择表的存储引擎</h2><ul>
+<li><p>如果你的应用不需要事务，处理的只是基本的CRUD操作，那么MyISAM是不二选择，速度快</p>
+</li>
+<li><p>如果需要支持事务，选择InnoDB</p>
+</li>
+<li><p>Memory存储引擎就是将数据存储在内存中，由于没有磁盘I.&#x2F;O的等待，速度极快，但由于是内存存储引擎，所做的任何修改在服务器重启后都将消失（用户子线状态）</p>
+</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">        <span class="token class-name">Integer</span> i1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> i2 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> i3 <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> i4 <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i1 <span class="token operator">==</span> i2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i3 <span class="token operator">==</span> i4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
-<span class="token comment">//我们看Integer.valueOf源码可知:在通过valueOf方法创建Integer对象的时候，如果数值在[-128,127]之间，便返回指向</span>
-<span class="token comment">//IntegerCache.cache中已经存在的对象的引用；否则创建一个新的Integer对象，因此得出以上结论。</span>
-        
-        <span class="token class-name">Double</span> d1 <span class="token operator">=</span> <span class="token number">100.0</span><span class="token punctuation">;</span>
-        <span class="token class-name">Double</span> d2 <span class="token operator">=</span> <span class="token number">100.0</span><span class="token punctuation">;</span>
-        <span class="token class-name">Double</span> d3 <span class="token operator">=</span> <span class="token number">200.0</span><span class="token punctuation">;</span>
-        <span class="token class-name">Double</span> d4 <span class="token operator">=</span> <span class="token number">200.0</span><span class="token punctuation">;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d1 <span class="token operator">==</span> d2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d3 <span class="token operator">==</span> d4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
-<span class="token comment">//Double类的valueOf方法采用与Integer类的valueOf方法不同的实现，因为在某个范围内的整型数值的个数是有限的，而浮点数却不是</span>
-<span class="token comment">//Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的</span>
-<span class="token comment">//Double、Float的valueOf方法的实现是类似的。</span>
-        
-        <span class="token class-name">Boolean</span> b1 <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token class-name">Boolean</span> b2 <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token class-name">Boolean</span> b3 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token class-name">Boolean</span> b4 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b1 <span class="token operator">==</span> b2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b3 <span class="token operator">==</span> b4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//当 "=="运算符的两个操作数都是 包装器类型的引用，则是比较指向的是否是同一个对象</span>
-<span class="token comment">//而如果其中有一个操作数是表达式（即包含算术运算）则比较的是数值（即会触发自动拆箱的过程）</span>
-<span class="token comment">//另外，对于包装器类型，equals方法并不会进行类型转换</span>
-<span class="token comment">//时刻注意如果数值在[-128,127]之间，便返回已经存在的对象的引用；否则创建一个新的对象</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-         
-        <span class="token class-name">Integer</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> c <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> d <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> e <span class="token operator">=</span> <span class="token number">321</span><span class="token punctuation">;</span>
-        <span class="token class-name">Integer</span> f <span class="token operator">=</span> <span class="token number">321</span><span class="token punctuation">;</span>
-        <span class="token class-name">Long</span> g <span class="token operator">=</span> <span class="token number">3L</span><span class="token punctuation">;</span>
-        <span class="token class-name">Long</span> h <span class="token operator">=</span> <span class="token number">2L</span><span class="token punctuation">;</span>
-         
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token operator">==</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token operator">==</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token operator">==</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>g<span class="token operator">==</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>a<span class="token operator">+</span>h<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment">//第三句由于  a+b包含了算术运算，因此会触发自动拆箱过程（会调用intValue方法），因此它们比较的是数值是否相等</span>
-<span class="token comment">//而对于c.equals(a+b)会先触发自动拆箱过程，再触发自动装箱过程，也就是说a+b，会先各自调用intValue方法，得到了加法运算后的数</span>
-<span class="token comment">//值之后，便调用Integer.valueOf方法，再进行equals比较</span>
-<span class="token comment">//注意倒数第二个和最后一个输出的结果（如果数值是int类型的，装箱过程调用的是Integer.valueOf；如果是long类型的，装箱调用的</span>
-<span class="token comment">//Long.valueOf方法），最后一个自动拆箱后int型的a会自动转换为long型的a，再和long型的h相加，最后与同为long型的g比较</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="4-存储引擎细节"><a href="#4-存储引擎细节" class="headerlink" title="4.存储引擎细节"></a>4.存储引擎细节</h2><ul>
+<li>修改存储引擎： alter table 表名 engine &#x3D; 存储引擎</li>
+<li>Myisam不支持事务，也不支持外键，但其访问速度快，对事务完整性没有要求</li>
+<li>InnoDB存储引擎提供了具有提交，回滚和崩溃恢复能力的事务安全，但是比起Myisam存储引擎，InnoDB写的处理效率差一些，并且会占用更多的磁盘空间以保留数据和索引</li>
+<li>Memory存储引擎使用存在内存中的内容来创建表，每个Memory表只实际对应一个磁盘文件。Memory类型的表访问速度非常快，因为它的数据是存放在内存中的，并且默认使用HASH索引，但是一旦服务关闭，表中的数据就会丢失掉，表的结构还在</li>
+</ul>
 
                 
             </div>
@@ -592,7 +634,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhuanshenyujianta.github.io/2022/10/03/zhuang-xiang-yu-chai-xiang/">http://zhuanshenyujianta.github.io/2022/10/03/zhuang-xiang-yu-chai-xiang/</a>
+                    <a href="http://zhuanshenyujianta.github.io/2022/10/14/mysql-cun-chu-yin-qing/">http://zhuanshenyujianta.github.io/2022/10/14/mysql-cun-chu-yin-qing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +672,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaSE/">
-                                    <span class="chip bg-color">JavaSE</span>
+                                <a href="/tags/Mysql/">
+                                    <span class="chip bg-color">Mysql</span>
                                 </a>
                             
                         </div>
@@ -697,17 +739,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/04/string-xi/">
+                <a href="/2022/10/14/mysql-cun-chu-yin-qing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="String系列">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Mysql存储引擎">
                         
-                        <span class="card-title">String系列</span>
+                        <span class="card-title">Mysql存储引擎</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -717,9 +760,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -728,11 +771,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaSE/">
-                        <span class="chip bg-color">JavaSE</span>
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>
@@ -746,13 +790,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/01/nei-bu-lei/">
+                <a href="/2022/10/14/final/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="内部类">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="final finally finalize">
                         
-                        <span class="card-title">内部类</span>
+                        <span class="card-title">final finally finalize</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -763,7 +807,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-14
                             </span>
                         <span class="publish-author">
                             
